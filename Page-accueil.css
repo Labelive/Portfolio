@@ -1,7 +1,5 @@
 body{
   font-family: "Libre Bodoni", serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
   font-style: normal;
   margin: auto 0%;
   padding: 0%;
@@ -101,7 +99,7 @@ header .corps-head {
  width: 100%;
  margin : 80px 5% 30px 5%;
  padding : 0% 0% 0% 5%;
- background-color: rgba( 444, 888, 555, 0.3);
+ background-color: rgba(444, 888, 555, 0.3);
  background-size : cover;
 }
 
@@ -670,17 +668,12 @@ nav a{
 
                                         /* SECTION 3 */ 
 
-
-.section3 {
-  border: 1px solid black;
-}
 .section3 h1 {
   color :   #fef1df;
   margin-left: 8%;
   letter-spacing: 3vw;
 }
 .section3 p {
- border : 1px solid black;
  text-align: center;
  margin-top : 5%;
  margin-bottom: 10%;
@@ -695,55 +688,77 @@ nav a{
   font-family: "Quicksand", serif;
   font-style: normal;
   padding : 5%;
+  align-items: center;
 }
 
 form {
  background-color: rgba( 444, 888, 555, 0.6);
  border-radius : 25px;
- margin : 5% 25% 5% 25%;
+ margin : 0% 30% 0% 30%;
+ padding: 0.5% 0% 0% 0%;
 }
 
 form h1{
 text-align: center;
 color: rgba(0, 0, 0, 0.79);
 font-size: 45px;
-margin-bottom: 5%;
-padding-top : 5%;
+margin-bottom: 10%;
 }
 .separation2 {
  background-color : rgba(250, 128, 114, 0.6);
  margin-left: 25%;
  margin-right: 25%;
+ margin-bottom: 5%;
  height: 2px;
  border-radius: 5px;
 }
 form .corps-formulaire {
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 30px;
+}
+
+form .corps-formulaire .groupe {
  display: flex;
- flex-wrap: wrap;
-}
-
-form .corps-formulaire .gauche {
- width: 50%;
-}
-form .corps-formulaire .droite {
- width: 50%;
-}
-form .corps-formulaire .droite .boite {
- height : 95%;
-}
-
-form .corps-formulaire .boite {
- margin-top : 0px;
- display : flex;
  flex-direction: column;
- padding : 5%;
+ padding: 5%;
+ position: relative;
+ margin: 2%;
 }
 
+ form .corps-formulaire .gauche .groupe input {
+  margin-top : 20px;
+  padding : 10px 0px 10px 35px;
+  border :  1px solid rgba(250, 128, 114, 0.6);
+  outline : none;
+  border-radius: 15px;
+ }
+ form .corps-formulaire .droite{
+  width: 45%;
+ }
+ form .corps-formulaire .droite .groupe{
+  height: 97%;
+  width: 100%;
+ }
+ form .corps-formulaire .droite .groupe textarea {
+  margin-top : 20px;
+  padding : 10px;
+  border :  2px solid rgba(250, 128, 114, 0.6);
+  border-radius: 15px;
+  outline : none;
+  resize: none;
+  height: 75%;
+ }
+
+ .divbutton {
+  text-align: center;
+ }
 .pied-formulaire button{
- margin : 30px;
+ margin: 30px;
  background-color: rgba(250, 128, 114, 0.6);
  color : #fff;
  font-size: 15px;
+ text-align: center;
  border : none;
  outline : none;
  padding : 10px 20px;
@@ -755,51 +770,56 @@ form .corps-formulaire .boite {
 .pied-formulaire button:hover{
  transform: scale(1.05);
 }
-
-
-input {
- margin-top : 20px;
- padding : 10px 0px 10px 35px;
- border :  1px solid rgba(250, 128, 114, 0.6);
- outline : none;
- border-radius: 15px;
-}
  
-textarea {
- margin-top : 20px;
- padding : 10px;
- border :  2px solid rgba(250, 128, 114, 0.6);
- border-radius: 15px;
- outline : none;
- resize: none;
- height: 100%;
+@media screen and (max-width : 1420px){
+  form .corps-formulaire .droite{
+    width: 40%;
+  }
 }
 
-@media screen and (max-width : 920px){
- form {
-  margin : 5% 15% 5% 15%;
- }
+@media screen and (max-width : 1310px){
+  form .corps-formulaire .groupe {
+    flex-direction: column;
+    display: inline-flex;
+    width: 85%;
+    padding: 5%;
+    margin :2%;
+  }
 }
-@media screen and (max-width : 920px){
- form .corps-formulaire .droite{
-  width: 100%;
- }
+@media screen and (max-width : 1310px){
+  form .corps-formulaire .droite .groupe {
+    flex-direction: column;
+    display: inline-flex;
+    width: 85%;
+    padding: 5%;
+    margin :2%;
+  }
 }
-@media screen and (max-width : 920px){
- form .corps-formulaire .gauche{
-  width: 100%;
- }
+@media screen and (max-width : 1310px){
+  form .corps-formulaire .droite {
+    flex-direction: column;
+    display: inline-flex;
+    width: 100%;
+    margin :2%;
+  }
+}
+@media screen and (max-width : 750px){
+  form {
+    margin : 0% 25% 0% 25%;
+  }
+}
+@media screen and (max-width : 605px){
+  form {
+    margin : 0% 20% 0% 20%;
+  }
 }
 
-
-
-
-
-footer{
-  position: absolute;
-  width : 100%;
-}
-
-footer p{
+.footer {
+  height: 80px;
   text-align: center;
+}
+
+.footer p {
+  color : #fff;
+  font-size : 15px;
 }
